@@ -1,0 +1,197 @@
+//-----------------------------------------------[Colors]
+@white:#ececf2;
+.white{ color:@white; }
+.whiteBG{ background-color:@white; }
+
+@black:#212123;
+.black{ color:@black; }
+.blackBG{ background-color:@black; }
+
+
+@red:#65262b;
+.red{ color:@red; }
+.redBG{ background-color:@red; .white; }
+
+@red2:#a05f67;
+.red2{ color:@red2; }
+.red2BG{ background-color:@red2; .black; }
+
+@red3:#df9fa7;
+.red3{ color:@red3; }
+.red3BG{ background-color:@red3; .black; }
+
+
+@orange:#80492f;
+.orange{ color:@orange; }
+.orangeBG{ background-color:@orange; .white; }
+
+@orange2:#b37d64;
+.orange2{ color:@orange2; }
+.orange2BG{ background-color:@orange2; .black; }
+
+@orange3:#edb69d;
+.orange3{ color:@orange3; }
+.orange3BG{ background-color:@orange3; .black; }
+
+
+@green:#226867;
+.green{ color:@green; }
+.greenBG{ background-color:@green; .white; }
+
+@green2:#5ba3a2;
+.green2{ color:@green2; }
+.green2BG{ background-color:@green2; .black; }
+
+@green3:#9be2e1;
+.green3{ color:@green3; }
+.green3BG{ background-color:@green3; .black; }
+
+
+@blue:#3d454d;
+.blue{ color:@blue; }
+.blueBG{ background-color:@blue; .white; }
+
+@blue2:#5c81a3;
+.blue2{ color:@blue2; }
+.blue2BG{ background-color:@blue2; .black; }
+
+@blue3:#9bc1e3;
+.blue3{ color:@blue3; }
+.blue3BG{ background-color:@blue3; .black; }
+
+
+@grey:#5e5f61;
+.grey{ color:@grey; }
+.greyBG{ background-color:@grey; .white; }
+
+@grey2:#afb1b3;
+.grey2{ color:@grey2; }
+.grey2BG{ background-color:@grey2; .black; }
+
+@grey3:#d8dadd;
+.grey3{ color:@grey3; }
+.grey3BG{ background-color:@grey3; .black; }
+//-----------------------------------------------[Text Styles]
+.example .column{
+	min-height:40px;
+	background:@blue;
+	-webkit-box-shadow: 0px 0px 0px 2px @blue2 inset;
+	box-shadow: 0px 0px 0px 2px @blue2 inset;
+}
+.example .column.preContainer{
+	min-height:40px;
+	background:@grey3;
+	-webkit-box-shadow: 0px 0px 0px 2px @grey inset;
+	box-shadow: 0px 0px 0px 2px @grey inset;
+	pre{
+		font-family: 'Ubuntu Mono';
+		font-size:12px;
+		margin:40px;
+	}
+}
+.example .box {
+	min-height:20px;
+	line-height: 20px;
+	text-align: center;
+	color: @black;
+	margin-top:10px;
+	margin-bottom: 10px;
+	background:@blue3;
+	span{
+		font-weight: bold;
+	}
+}
+.fullWidth{
+	.whiteBG;
+}
+#header,
+#footer{
+	background:@grey2;
+	-webkit-box-shadow: 0px 0px 2px 2px @grey2;
+	box-shadow: 0px 0px 2px 2px @grey2;
+
+	background-color: @blue2;
+	background-image: -webkit-linear-gradient(top, @blue3, @blue2);
+	background-image:         linear-gradient(to bottom, @blue3, @blue2);
+
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Racing Sans One', cursive;
+	.red;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+html,body,p{
+	font-family: 'Oxygen', sans-serif;
+	.black;
+	font-size:16px;
+	line-height: 20px;
+}
+h1{
+	text-align: center;
+	line-height: 35px;
+	font-size: 34px;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+h2{
+	text-align: center;
+	line-height: 30px;
+	font-size: 26px;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+p{
+	margin:10px 0px;
+}
+p#title{
+	font-family: 'Racing Sans One', cursive;
+	.blue;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0px 4px 2px @blue2;
+	font-size: 60px;
+	line-height: 80px;
+	text-align: center;
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
+	a:hover{
+		color: white;
+		text-decoration: none;
+	}
+}
+p.navItem{
+	font-family: 'Racing Sans One', cursive;
+	.blue;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0px 4px 2px @blue2;
+	font-size: 30px;
+	line-height: 80px;
+	text-align: center;
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
+	a:hover{
+		color: white;
+		text-decoration: none;
+	}
+}
+b{
+	font-weight: 700;
+}
+a.button{
+	.redBG;
+	.white;
+	border-radius: 6px;
+	text-decoration: none;
+	text-align: center;
+	padding:12px 20px;
+}
+a.button:hover{
+	.red2BG;
+	.white;
+}
