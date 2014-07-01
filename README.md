@@ -52,3 +52,34 @@ The code below creates a seven column grid, as well as its small screen and mobi
 
 
 Most of the time, you won't need the "DIVIDE" parameter. It's there so you can "scale down" a grid to a smaller number of columns. For example `.generate(12,60px,20px,4);` will actually generate a THREE column grid, where `colwide2` is one column, and `colwide6` is two columns wide.
+
+
+Custom Behaviour at Every Size
+-----
+
+So, the DIVIDE parameter auto-divides up a grid to use a smaller number of columns. It's fast, but it's not perfect. Well, you can override it! Just replace the `.generate()` call with the individual math calls for each element:
+	
+	.generate(12,220px,20px,4);
+
+Becomes:
+
+	.box{
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.colwide1{ .setColWidth(1,220px,20px); }
+	.wide1{ .setBoxWidth(1,220px,20px); }
+
+	.colwide2{ .setColWidth(1,220px,20px); }
+	.wide2{ .setBoxWidth(1,220px,20px); }
+
+	.colwide3{ .setColWidth(1,220px,20px); }
+	.wide3{ .setBoxWidth(1,220px,20px); }
+
+	.colwide4{ .setColWidth(1,220px,20px); }
+	.wide4{ .setBoxWidth(1,220px,20px); }
+
+	.colwide5{ .setColWidth(2,220px,20px); }
+	.wide5{ .setBoxWidth(2,220px,20px); }
+
+And so on. This will let you specify (with the first number in all those "set width" calls) exactly how you want each column width to behave!
